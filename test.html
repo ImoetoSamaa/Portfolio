@@ -1,15 +1,15 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>thejfnerjfngdcgiklt</title>
     <style>
       body {
-        font-family: Libre Caslon Text;
-        background-color:#FFAB91;
+        font-family: serif; Text;
+        background-color: #B4B4B4;
       }
 
       .body-text {
-        padding-top 20vh;
+        padding-top: 20 vh;
         text-align: center;
         position: relative;
       }
@@ -24,48 +24,43 @@
 
       .hamburger-icon span {
         height: 5px;
-        width: 40px;
+        width: 40pxl
         background-color: black;
         display: block;
-        margin: 5px, 0px, 5px, 0px;
+        margin: 5px 0px 5px 0px;
         transition: 0.7s ease-in-out;
         transform: none;
       }
 
-      #openmenu:checked ~ .menu-pane {
-        right: -5vw;
+      #openmenu:checked ~ .menupane {
+        left: -5vw;
         transform: translateX(-5vw);
       }
 
-      #openmenu:checked ~ .menu-pane {
+      #openmenu: checked ~ .body-text {
         display: none;
       }
 
-      #openmenu: checked ~ .hamburger-icon
-      span:nth-oftype(2) {
-        transform: translate(0%, 175%);
-      rotate(-45deg);
+      #openmenu:checked ~ .hamburger-icon span:nth-of-type(2) {
+        transform: translate(0%, 175%) rotate(-45deg);
         background-color: white;
       }
 
-      #openmenu:checked ~ .hamburger-icon
-      span:nth-of-type(3) {
+      #openmenu:checked ~ .hamburger-icon span:nth-of-type(3) {
         transform: rotate(45deg);
         background-color: white;
       }
 
-      #openmenu:checked ~ .hamburger-icon
-      span:nth-of-type(1) {
+      #openmenu:checked ~ .hamburger-icon span:nth-of-type(1) {
         opacity: 0;
       }
 
-      #openmenu:checked ~ .hamburger-icon
-      span:nth-oftype(4) {
+      #openmenu:checked ~ .hamburger-icon span:nth-of-type(4) {
         opacity: 0;
       }
 
       div.menu-pane {
-        background-color: #000;
+        background-color: #707070;
         position: absolute;
         transform: translateX(-105vw);
         transform-origin: (0, 0);
@@ -74,35 +69,6 @@
         transition: 0.6s ease-in-out;
       }
 
-      .menu-pane p {
-        color: black;
-        font-size: 0.6em;
-      }
-
-      .menu-pane nav {
-        padding: 10%;
-      }
-
-      .menu-links li, a, span {
-            transition: 0.5s ease-in-out;
-      }
-
-      .menu-pane li a {
-        passing: 10%
-        display: inline-block;
-      }
-
-      .menu-pane li a {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-left: 10px;
-          font-size: 1em;
-      }
-
-      .menu-pane li: first-child {
-        font-size: 1.3em;
-        margin-left: -10px;
-      }
 
 
 
@@ -112,44 +78,37 @@
     <body>
       <div class="menu-container">
 
-          <input type="checkbox" id="openmenu"
-        class="hamburger-checkbox">
+        <input type="checkbox" id="openmenu"
+      class="hamburger-checkbox">
 
-          <div class="hamburger-icon">
-            <label for="openmenu" id="hamburger-label">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-          </div>
+      <div class="hamburger-icon">
+        <label for="openmenu" id="hamburger-label">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
 
-            <div class="menu-pane">
+        <div class="menu-pane">
 
-              <nav>
-                <ul class="menu-links">
-                  <li><a href="###">Home</a>
+          <nav>
+            <ul class="menu-links">
+              <li><a href="###">Imory</a>
+                <span id="Im">
+                </span>
+              </li>
 
-                  </li>
-
-                  <li><a href="###">About</a>
-
-                  </li>
-
-                  <li><a href="###">Gallery</a>
-
-                  </li>
-
-                  <li><a href="###">Contact</a>
-
-                  </li>
-                </ul>
+              <li><a href="###">Home</a></li>
+              <li><a href="###">About</a></li>
+              <li><a href="###">Gallery</a></li>
+              <li><a href="###">Work</a></li>
+              <li><a href="###">Contact</a></li>
+            </ul>
 
 
-              </nav>
-            </div>
-
-
+          </nav>
+        </div>
 
 
 
