@@ -4,19 +4,152 @@
     <title>Flexbox Container Assignment</title>
     <style>
       body {
-        font-family: Verdana;
-
-
-
-
-
-
-
-
-
-
-
-
+        font-family: Cormorant SC;
+        background-color: beige;
+      }
+      .flexChild {
+        background-color: grey;
+        border: 10px solid black;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 200px;
+        margin: 10px;
+        width: 200px;
+      }
+      .flexChildGiant {
+        heigt: 400px;
+      }
+      .flexContainer {
+        background-color: orange;
+        border-radius: 4px;
+        display: flex;
+      }
+      .flexRow {
+        background-color: red;
+        flex-direction: row;
+      }
+      .flexColumn {
+        background-color: blue;
+        flex-direction: column;
+      }
+      .flexWrap {
+        background-color: yellow;
+        flex-wrap: wrap;
+      }
+      .flexJustifyCenter {
+        background-color: purple;
+        justify-content: center;
+      }
+      .flexAlignItemsStart {
+        background-color: lightgreen;
+        align-items: flex-start;
+      }
+      .flexAlignItemsEnd {
+        background-color: lightgreen;
+        align-items: flex-end;
+      }
+      .flexAlignItemsCenter {
+        background-color: lightgreen;
+        align-items: center;
+      }
+      .flexAlignItemsStretch {
+        background-color: lightgreen;
+        align-items: stetch;
+        heiht: 300px;
+      }
+      .flexAlignItemsStretch div {
+        height: auto;
+      }
+      .flexAlignItemsBaseline {
+        background-color: lightgreen;
+        align-items: baseline;
+      }
+      .flexAlignItemsStart .flexChildGiant,
+      .flexAlignItemsEnd .flexChildGiant,
+      .flexAlignItemsCenter .flexChildGiant,
+      .flexAlignItemsStretch .flexChildGiant,
+      .flexAlignItemsBaseline .flexChildGiant {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      img {
+        height: 180px;
+        width: 180px;
+      }
+      .flexAlignItemsCenter img {
+        height: 100%;
+        width: 100%;
+      }
+      }
     </style>
   </head>
+  <body>
+    <h1> Hot Beverages </h1>
+    <div class="flexContainer flexRow">
+      <div class="flexChild"><img
+        src="../images/svitlana-eXw6CPGWwcg-unsplash.jpg"
+        alt="Tea">
+      </div>
+
+      <div class="flexChild"> <img
+        src="../images/alex-boyd-OLO8QPj1fJA-unsplash.jpg"
+        alt="Coffee 2">
+      </div>
+
+      <div class="flexChild"><img
+        src="../images/jia-ye-tQvUZtcKR1s-unsplash.jpg"
+        alt="Tea 2">
+      </div>
+
+      <div class="flexChild"><img
+        src="../images/lisa-hobbs-mRaNok_Ld6s-unsplash.jpg"
+        alt="Tea 2">
+      </div>
+    </div>
+
+    <h2> Scenery </h2>
+    <div class="flexContainer flexColumn">
+      <div class="flexChild"><img
+        src="../images/bastien-bonnamant-G0vCkBZ4KVw-unsplash.jpg"
+        alt="lighthouse">
+      </div>
+      <div class="flexChild"><img
+        src="../images/patrick-hendry-Gag6VJ2rrlU-unsplash.jpg"
+        alt="mountains">
+      </div>  <div class="flexChild"><img
+          src="../images/romeo-a-u7ufOzzWUds-unsplash.jpg"
+          alt="temple">
+        </div>
+      </div>
+      <h2>Animals</h2>
+      <div class="flexContainer flexJustifyCenter">
+        <div class="flexChild"><img
+          src="../images/hans-jurgen-mager-KgRKlQXmHR0-unsplash.jpg"
+          alt="PB lying">
+        </div>
+        <div class="flexChild"><img
+          src="../images/lennart-nacke-G4Mgm1Tnfw4-unsplash.jpg"
+          alt="PB waving">
+        </div>
+        <div class="flexChild"><img
+          src="../images/hans-jurgen-mager-qQWV91TTBrE-unsplash.jpg"
+          alt="PB waving">
+        </div>
+        <div class="flexChild"><img
+          src="../images/sid-balachandran-_9a-3NO5KJE-unsplash.jpg"
+          alt="PB waving">
+        </div>
+      </div>
+      <h2>Abandoned</h2>
+      <div class="flexAlignItemsCenter">
+        <div class="flexChild"><img
+          src="../images/cash-macanaya-EEcTb30yAWU-unsplash.jpg">
+        </div>
+        <div class="flexChild flexChildGiant"><img
+          src="../images/chenwei-yao-3OOQcz6lI5Q-unsplash.jpg">
+        </div>
+        <div class="flexChild"><img
+          src="../images/dylan-leagh-JyMthEAW4OM-unsplash.jpg">
+        </div>
+  </body>
 </html>
