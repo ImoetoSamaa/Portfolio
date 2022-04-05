@@ -3,17 +3,6 @@
   <head>
     <title>This is a grid assigment</title>
     <style>
-      .block {
-        padding: 20px;
-      }
-      .block1 {
-        background-color: lightblue;
-        grid-area: footer;
-      }
-      .block2 {
-        background-color: #C4EEEF;
-        grid-area: picCol1
-      }
       .myGrid {
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -21,7 +10,6 @@
         grid-template-areas:
           "header header header"
           "sidenav content content"
-          "sidenav picCol1 picCol1"
           "footer footer .";
       }
       .header {
@@ -30,21 +18,23 @@
         grid-area: header;
       }
       .nav {
-        background-color: #ADFEFF;
+        background-color: cyan;
         grid-area: sidenav;
         padding: 40px;
       }
       .content {
-        background-color: #D2FEFF;
         grid-area: content;
         padding: 40px;
       }
+
+
     </style>
   </head>
   <body>
     <div class="myGrid">
       <div class="header">
         <h1>Grids Assignment</h1>
+<<<<<<< HEAD
       </div>
       <div class="nav">
         Yes
@@ -52,7 +42,6 @@
           grid assignment. yes
         </div>
       </div>
-
       <div class="content">
         <div>
         Cillum instituendarum commodo aute laboris, veniam ingeniis
@@ -72,8 +61,13 @@
         consectetur, nam iis enim dolor minim.
         </div>
       </div>
+      <div class="block block1">This is the footer for the grid assignment.
+      </div>
+    </div>
+=======
 
 
-      <div class="block block1">This is the footer for the grid assignment.</div>
+
+>>>>>>> parent of 3ef717f (Assignment13.html)
   </body>
 </html>
