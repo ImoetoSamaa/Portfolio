@@ -3,21 +3,65 @@
   <head>
     <title>Form</title>
     <style>
+      #buttonContainer {
+        margin: 20px 0;
+      }
+      #buttonContainer input[type=submit] {
+        border: 1px solid black;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-right: 12px;
+        padding: 12px;
+      }
+      #buttonContainer input:focus-visible {
+        outline: 0;
+      }
+      #buttonContainer input[type=submit] {
+        background: linear-gradient(to bottom, lightblue, lightgreen);
+        border: 1px solid black;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-right: 12px;
+        padding-left: 12px;
+      }
 
-
-
-
-
+      #buttonContainer input[type=submit]:active {
+        background: linear-gradient(to bottom, teal, violet);
+      }
     </style>
   </head>
   <body>
     <h1>Forms Assignment</h1>
     <form>
-      <h2>
-
-
-
-
-
+      <h2>Please tell us what is your name?</h2><legend>
+        <div>
+          <label for="firstNameId">First Name:</label>
+          <input type="text" id="firstNameId" name="firstName">
+        </div>
+        <div>
+          <label for="midInitialid">Middle Initial</label>
+          <input type="text" id="midInitialid" name="midInitials">
+        </div>
+        <div>
+          <label for="lastNameId">Last Name<label>
+          <input type="text" id="lastNameId" name="lastName">
+        </div>
+        <h2>Do you like this form?</h2>
+        <div>
+          <input type="radio" id="choice1" name="options" value="1">
+          <label for="choice1">yes</label>
+        </div>
+        <div>
+          <input type="radio" id="choice2" name="option" value="2">
+          <label for="choice2">no</label>
+        </div>
+        <div>
+          <input type="radio" id="choice3" name="option" value="3">
+          <label for="choice3">I have to pick??</label>
+        </div>
+        <legend><div id="buttonContainer">
+          <input type="submit" value="Gotta click to finish this!">
+        </div>
+    </form>
   </body>
 </html>
