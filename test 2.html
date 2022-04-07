@@ -1,219 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
-    <title>MY PORTFOLIO</title>
-      <style>
-        body {
-          font-family: 'Gruppo', cursive;
-          background-color: black;
-        }
-
-        img {
-          transform: rotate(-25deg);
-          margin-top: -100px;
-          margin-left: -200px;
-        }
-
-        .overlay {
-          transform: rotate(-25deg);
-          height: 1200px;
-          width: 800px;
-          position: absolute;
-          left: 0;
-          background: black;
-          opacity: 0;
-          color: white;
-        }
-
-        .body-text {
-          padding-top: 20vh;
-          text-align: center;
-          position: relative;
-        }
-
-        .container {
-          width: 800px;
-          height: 400px;
-          background-color: black
-          overflow: hidden;
-          position: relative;
-          margin: 100px;
-        }
-
-        .diagonal {
-          height: 1200px;
-          width: 200px;
-          overflow: hidden;
-          transform: rotate(25deg);
-          position: absolute;
-          top: -200px;
-        }
-
-        .hamburger-icon {
-          position: absolute;
-          z-index: 1;
-          top: 5vh;
-          left: 5vw;
-          padding-bottom: 2vh;
-        }
-
-        .hamburger-icon span {
-          height: 2px;
-          width: 50px;
-          background-color: #707070;
-          display: block;
-          margin: 8px 0px 8px 0px;
-          transition: 0.7s ease-in-out;
-          transform: none;
-        }
-
-        #openmenu:checked ~ .menu-pane {
-          left: -5vw;
-          transform: translateX(-5vw);
-        }
-
-        #openmenu:checked ~ .body-text {
-          display: none;
-        }
-
-        #openmenu:checked ~ .hamburger-icon span:nth-of-type(2) {
-          transform: translate(0%, 200%) rotate(-45deg);
-          background-color: #B4B4B4;
-        }
-
-        #openmenu:checked ~ .hamburger-icon span:nth-of-type(3) {
-          transform: translate(0%, -200%) rotate(45deg);
-          background-color: #B4B4B4;
-        }
-
-        #openmenu:checked ~ .hamburger-icon span:nth-of-type(1) {
-          opacity: 0;
-        }
-
-        #openmenu:checked ~ .hamburger-icon span:nth-of-type(4) {
-          opacity: 0;
-        }
-
-        div.menu-pane {
-          background-color: #707070;
-          position: absolute;
-          transform: translateX(-105vw);
-          transform-origin: (100, 100);
-          width: 60vw;
-          height: 100%;
-          transition: 0.6s ease-in-out;
-        }
-
-        .menu-pane p {
-          color: #707070;
-          font-size: 0.6em;
-        }
-
-        .menu-pane nav {
-          padding: 10%;
-        }
-
-        .menu-links li, a, span {
-          transition: 0.5s ease-in-out;
-        }
-
-        .menu-pane ul {
-          padding: 10%;
-          display: inline-block;
-        }
-
-        .menu-pane li {
-          padding-top: 20px;
-          padding-bottom: 20px;
-          font-size: 3em;
-          margin-left: 20px;
-          list-style-type: none;
-        }
-
-        .menu-pane li:first-child {
-          font-size: 7em;
-          margin-left: -10px;
-        }
-
-        .menu-links li a {
-          color: black;
-          text-decoration: none;
-        }
-
-        .menu-links li:hover a {
-          color: #B4B4B4;
-        }
-
-        .menu-links li:first-child:hover a {
-          color: #B4B4B4;
-        }
-
-        #Imory {
-          background-color: #B4B4B4;
-          opacity: 0;
-        }
-
-        .menu-links li:first-child:hover #Imory {
-          opacity: 1;
-        }
-
-        .menu-links li:first-child a {
-          padding: 5px;
-        }
-
-        input.hamburger-checkbox {
-          position: absolute;
-          z-index: 3;
-          top: 5vh;
-          left: 90vw;
-          width: 10vw;
-          opacity: 0;
-          height: 6vh;
-        }
-
-        @media screen and (min-width: 480px) and (max-width: 799px) {
-
-
-        }
-
-        @media screen and (min-width: 800px) {
-
-        }
-
-      </style>
+    <title>Forms Example - Part 1</title>
   </head>
   <body>
-    <div class="menu-container">
-
-      <input type="checkbox" id="openmenu" class="hamburger-checkbox">
-
-      <div class= "hamburger-icon">
-        <label for="openmenu" id="hamburger-label">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
+    <h1>Let's look at forms!</h1>
+    <form>
+      <h2>Text Input</h2>
+      <p>What is your name?</p>
+      <div>
+        <label for="firstNameId">First Name:</label>
+        <input type="text" id="firstNameId" name="firstName">
       </div>
-
-      <div class="menu-pane">
-
-        <nav>
-          <ul class="menu-links">
-            <li><a href="###">Imory</a><span id="Imory">
-            </span>
-            </li>
-            <li><a href="###">Gallery</a>
-            </li>
-            <li><a href="###">About</a>
-            </li>
-            <li><a href="###">Contacts</a>
-            </li>
-        </nav>
+      <div>
+        <label for="lastNameId">Last Name:</label>
+        <input type="text" id="lastNameId" name="lastName">
       </div>
-    </div>
+      <h2>Textarea Input</h2>
+      <div>
+        <label for="codeFeelingsId">How do you feel about programming?</label>
+        <br>
+        <textarea id="codeFeelingsId" name="codeFeelings" rows="5" cols="30">Default text</textarea>
+      </div>
+      <h2>Radio Input</h2>
+      <p>What program are you in?</p>
+      <div>
+        <input type="radio" id="raspRadio" name="program" value="rasp">
+        <label for="raspRadio">Recording Arts and Show Production</label>
+      </div>
+      <div>
+        <input type="radio" id="dfvpRadio" name="program" value="dfvp">
+        <label for="dfvpRadio">Digital Filmmaking and Video Production</label>
+      </div>
+      <div>
+        <input type="radio" id="gdwdRadio" name="program" value="gdwd">
+        <label for="gdwdRadio">Graphic Design and Web Development</label>
+      </div>
+      <h2>Checkbox Input</h2>
+      <p>How do you get to class?</p>
+      <div>
+        <input type="checkbox" id="bikeCheckbox" name="vehicleOption1" value="bike">
+        <label for="bikeCheckbox">Bike</label>
+      </div>
+      <div>
+        <input type="checkbox" id="busCheckbox" name="vehicleOption2" value="bus">
+        <label for="busCheckbox">Bus</label>
+      </div>
+      <div>
+        <input type="checkbox" id="carCheckbox" name="vehicleOption3" value="car">
+        <label for="carCheckbox">Car</label>
+      </div>
+      <div>
+        <input type="checkbox" id="bedCheckbox" name="vehicleOption4" value="bed">
+        <label for="bedCheckbox">I roll out of bed and open my laptop</label>
+      </div>
+      <h2>Date Input</h2>
+      <div>
+        <label for="dateId">What is your birthday?</label>
+        <input type="date" id="dateId" name="bday">
+      </div>
+      <h2>Dropdown (&lt;select&gt;) Input</h2>
+      <div>
+        <label for="foodGroupId">What is your favorite food group?</label>
+        <select id="foodGroupId" name="foodgroup">
+          <option value="fruits">Fruits</option>
+          <option value="vegetables">Vegatables</option>
+          <option value="meats">Meat</option>
+          <option value="grains">Grains</option>
+          <option value="dairy">Dairy</option>
+        </select>
+      </div>
+    </form>
   </body>
 </html>

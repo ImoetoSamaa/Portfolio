@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>This is a grid Assignment</title>
+    <style>
+      .block {
+        padding: 20px;
+      }
+      .block1 {
+        background-color: lightblue;
+        grid-area: footer;
+      }
+      .myGrid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:
+          "header header header"
+          "sidenav content content"
+          "footer footer .";
+      }
+      .header {
+        background-color: lightblue;
+        padding: 36px;
+        grid-area: header;
+      }
+      .nav {
+        background-color: cyan;
+        grid-area: sidenav;
+        padding: 40px;
+      }
+      .content {
+        grid-area: content;
+        padding: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myGrid">
+      <div class="header"><h1>This is the header for the Grid Assignment.</h1>
+      </div>
+      <div class="nav">
+        This is the inside of the nav bar
+      </div>
+      <div class
+
+</html>
