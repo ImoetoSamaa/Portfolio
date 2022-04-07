@@ -2,13 +2,14 @@ body {
   background-color: grey;
 }
 
+.gold {
+  color: #dbbf73;
+}
+
 .white {
   color: white;
 }
 
-.yellow {
-  color: yellow;
-}
 
 header {
   display: flex;
@@ -52,11 +53,25 @@ nav ul li {
 }
 
 #cards {
-  grid-area: card;
+  display: flex;
+  flex-direction: row;
+  grid-area: cards;
+  padding-top: 20px;
+}
+
+#cards img {
+  flex: 1;
 }
 
 main {
+  border: 1px solid;
   grid-area: blog;
+  margin: 20px;
+  padding: 20px;
+}
+
+main h2 span {
+  color: #1c4268;
 }
 
 aside {
@@ -65,9 +80,32 @@ aside {
 }
 
 #nextAppearance {
-  background-image: url("../events-bg.jpg");
+  background-image: url("../images/events-bg.jpg");
   background-position: right bottom;
   background-repeat: no-repeat;
+}
+
+#nextAppearance h3,
+#nextPublication h3 {
+  color: white;
+}
+
+#nextPublication {
+  background-image: url("../images/releases-bg.jpg");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+footer {
+  grid-area: footer;
+}
+
+#bottom {
+  background-image: url("../images/footer-bg.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  grid-area: bottom;
+  height: 120px;
 }
 
 #grid {
@@ -97,4 +135,11 @@ aside {
     "bottom";
   }
 
+  nav ul {
+    flex-direction: column;
+  }
+
+  #cards {
+    flex-direction: column;
+  }
 }
