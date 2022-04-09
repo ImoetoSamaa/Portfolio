@@ -1,5 +1,6 @@
 body {
   background-color: grey;
+  background-image: url(../images/grey-bg.jpg);
 }
 
 .gold {
@@ -23,6 +24,7 @@ header {
   height: 75px;
   width: 65px;
 }
+
 h1,
 h2,
 h3 {
@@ -36,13 +38,21 @@ nav {
 nav ul {
   display:flex;
   flex-direction: row;
-  list-style-type: none;
   padding: 0;
 }
 
 nav ul li {
   flex: 1;
+  list-style-type: none;
   text-align: center;
+}
+
+nav ul li:hover {
+  background: linear-gradient(white, lightgrey);
+}
+
+nav ul li:active {
+  background: linear-gradient(white, lightgrey);
 }
 
 #banner {
@@ -53,10 +63,12 @@ nav ul li {
 }
 
 #cards {
+  border: 10px solid;
+  border-color: #888888;
   display: flex;
   flex-direction: row;
   grid-area: cards;
-  padding-top: 20px;
+
 }
 
 #cards img {
@@ -74,15 +86,21 @@ main h2 span {
   color: #1c4268;
 }
 
+main h3 a {
+  color: #1c4268;
+  text-decoration: none;
+}
+
 aside {
   grid-area: sidenav;
-
 }
 
 #nextAppearance {
   background-image: url("../images/events-bg.jpg");
   background-position: right bottom;
   background-repeat: no-repeat;
+  border: 10px solid;
+  border-color: #888888;
 }
 
 #nextAppearance h3,
@@ -94,6 +112,22 @@ aside {
   background-image: url("../images/releases-bg.jpg");
   background-position: right bottom;
   background-repeat: no-repeat;
+  border: 10px solid;
+  border-color: #888888;
+}
+
+#ValyrianSteel {
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  border: 10px solid;
+  border-color: #888888;
+}
+
+#StageCoach {
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  border: 10px solid;
+  border-color: #888888;
 }
 
 footer {
@@ -106,6 +140,8 @@ footer {
   background-repeat: no-repeat;
   grid-area: bottom;
   height: 120px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 #grid {
@@ -135,11 +171,19 @@ footer {
     "bottom";
   }
 
+  #banner {
+    height: 300px;
+  }
+
   nav ul {
     flex-direction: column;
   }
 
   #cards {
+    flex-direction: column;
+  }
+
+  aside {
     flex-direction: column;
   }
 }
