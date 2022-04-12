@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Forms Example - Part 1</title>
+    <title>Countdown Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Merienda', cursive;
+        color: white;
+        font-size: 25px;
+        background-color: black;
+        background-image: url(images/CountdownProject/graduation.gif);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        background-repeat: no-repeat;
+        padding: 160px;
+        text-align: center;
+      }
+
+      body img {
+        height: 200px;
+      }
+
+      .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+      }
+
+      #hero {
+        align-items: center;
+        display: flex;
+        height: 500px;
+        justify-content: center;
+      }
+      #countdown {
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
-    <h1>Let's look at forms!</h1>
-    <form>
-      <h2>Text Input</h2>
-      <p>What is your name?</p>
-      <div>
-        <label for="firstNameId">First Name:</label>
-        <input type="text" id="firstNameId" name="firstName">
+    <div class="topleft">
+      <h1>Graduation Countdown</h1>
+      <img src="images/CountdownProject/Logo.png" alt="Imory Logo">
+    </div>
+    <div id="hero">
       </div>
-      <div>
-        <label for="lastNameId">Last Name:</label>
-        <input type="text" id="lastNameId" name="lastName">
-      </div>
-      <h2>Textarea Input</h2>
-      <div>
-        <label for="codeFeelingsId">How do you feel about programming?</label>
-        <br>
-        <textarea id="codeFeelingsId" name="codeFeelings" rows="5" cols="30">Default text</textarea>
-      </div>
-      <h2>Radio Input</h2>
-      <p>What program are you in?</p>
-      <div>
-        <input type="radio" id="raspRadio" name="program" value="rasp">
-        <label for="raspRadio">Recording Arts and Show Production</label>
-      </div>
-      <div>
-        <input type="radio" id="dfvpRadio" name="program" value="dfvp">
-        <label for="dfvpRadio">Digital Filmmaking and Video Production</label>
-      </div>
-      <div>
-        <input type="radio" id="gdwdRadio" name="program" value="gdwd">
-        <label for="gdwdRadio">Graphic Design and Web Development</label>
-      </div>
-      <h2>Checkbox Input</h2>
-      <p>How do you get to class?</p>
-      <div>
-        <input type="checkbox" id="bikeCheckbox" name="vehicleOption1" value="bike">
-        <label for="bikeCheckbox">Bike</label>
-      </div>
-      <div>
-        <input type="checkbox" id="busCheckbox" name="vehicleOption2" value="bus">
-        <label for="busCheckbox">Bus</label>
-      </div>
-      <div>
-        <input type="checkbox" id="carCheckbox" name="vehicleOption3" value="car">
-        <label for="carCheckbox">Car</label>
-      </div>
-      <div>
-        <input type="checkbox" id="bedCheckbox" name="vehicleOption4" value="bed">
-        <label for="bedCheckbox">I roll out of bed and open my laptop</label>
-      </div>
-      <h2>Date Input</h2>
-      <div>
-        <label for="dateId">What is your birthday?</label>
-        <input type="date" id="dateId" name="bday">
-      </div>
-      <h2>Dropdown (&lt;select&gt;) Input</h2>
-      <div>
-        <label for="foodGroupId">What is your favorite food group?</label>
-        <select id="foodGroupId" name="foodgroup">
-          <option value="fruits">Fruits</option>
-          <option value="vegetables">Vegatables</option>
-          <option value="meats">Meat</option>
-          <option value="grains">Grains</option>
-          <option value="dairy">Dairy</option>
-        </select>
-      </div>
-    </form>
+      <h1 id="countdown"></h1>
+    </div>
+    <script type="text/javascript">
+      let deadline = new Date("July 22, 2022 16:30:00");
+
+      function setCountdown() {
+        let now = new Date();
+
+        let timeLeft = deadline.getTime() - now.getTime();
+
+        let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor(
+          (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        var seconds = Math.floor(
+          (timeLeft % (1000 * 60)) / 1000
+        )
+
+        document.getElementById('countdown').innerHTML =
+          days + 'd ' + hours + 'h ' + minutes + 'm '
+            + seconds + 's';
+      }
+      setInterval(setCountdown, 1000);
+    </script>
   </body>
 </html>
