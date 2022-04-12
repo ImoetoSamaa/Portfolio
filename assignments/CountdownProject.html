@@ -7,20 +7,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
     <style>
       body {
-        display: flex;
-        flex-wrap: wrap;
         font-family: 'Merienda', cursive;
+        color: white;
+        font-size: 25px;
         background-color: black;
         background-image: url(../images/CountdownProject/graduation.gif);
-        height: 100%;
         background-position: center;
         background-size: cover;
         position: relative;
         background-repeat: no-repeat;
-        color: white;
-        font-family: 'Merienda', cursive;
-        font-size: 25px;
-        padding: 250px;
+        padding: 160px;
+        text-align: center;
+      }
+
+      body img {
+        height: 200px;
+      }
+
+      .topleft{
+        position: absolute;
+        top: 0;
+        left: 16px;
       }
 
       #hero {
@@ -35,6 +42,10 @@
     </style>
   </head>
   <body>
+    <div class="topleft">
+      <h1>Time until Graduation...</h1>
+      <img src="../images/CountdownProject/Logo.png" alt="Imory Logo">
+    </div>
     <div id="hero">
       </div>
       <h1 id="countdown">Graduation Countdown</h1>
