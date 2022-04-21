@@ -1,21 +1,14 @@
 body {
   font-family: 'Gruppo', cursive;
   background-color: black;
+  overflow-x: hidden;
 }
 
-.flexChild {
-    border: 2px solid grey;
-    border-radius: 4px;
-    box-sizing: content-box;
-    font-size: 100px;
-    font-weight: bold;
-    margin: 10px;
-    padding: 8px 14px;
-    text-align: center;
+.mySlides {
+  display: none;
 }
 
 .body-text {
-  display: flex;
   padding-top: 20vh;
   position: relative;
   color: white;
@@ -23,8 +16,35 @@ body {
   z-index: -1;
 }
 
-.flexWrap {
-  flex-wrap: wrap;
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 1000px;
+  position: relative;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .hamburger-icon {
@@ -35,28 +55,20 @@ body {
   padding-bottom: 2vh;
 }
 
-.flexChild a {
-  color: white;
-  text-decoration: none;
-
-}
-
-.menu-container {
-
-}
-
 .hamburger-icon span {
   height: 2px;
   width: 50px;
   background-color: #707070;
   display: block;
   margin: 8px 0px 8px 0px;
-  transition: 0.7s reverse ease-in-out;
+  transition: 0.7s ease-in-out;
   transform: none;
 }
 
+
+
 #openmenu:checked ~ .menu-pane {
-  transform: translateX(40vw);
+  transform: translateX(0vw);
 }
 
 #openmenu:checked ~ .body-text {
@@ -86,9 +98,9 @@ div.menu-pane {
   position: absolute;
   transform: translateX(105vw);
   transform-origin: (100, 100);
-  width: 60vw;
+  width: 100vw;
   height: 100%;
-  transition: transform 1s ease-in-out;
+  transition: 0.6s ease-in-out;
 }
 
 .menu-pane p {
@@ -157,6 +169,31 @@ input.hamburger-checkbox {
   width: 10vw;
   opacity: 0;
   height: 6vh;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 @media screen and (min-width: 480px) and (max-width: 800px) {

@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Grid Examples</title>
-    <style>
-      .myGrid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: minmax(50px, auto);
-        grid-template-areas:
-            "header header header"
-            "sidenav content content";
-      }
-      .header {
-        background-color: lightgreen;
-        padding: 36px;
-        grid-area: header;
-      }
-      .nav {
-        background-color: #DDFFDD;
-        grid-area: sidenav;
-        padding: 36px;
-      }
-      .content {
-        grid-area: content;
-        padding: 36px;
-      }
-    </style>
+    <title>Forms Example - Part 1</title>
   </head>
   <body>
-    <div class="myGrid">
-      <div class="header">
-        <h1>This is how page layouts can be done with grids (and areas)</h1>
+    <h1>Let's look at forms!</h1>
+    <form>
+      <h2>Text Input</h2>
+      <p>What is your name?</p>
+      <div>
+        <label for="firstNameId">First Name:</label>
+        <input type="text" id="firstNameId" name="firstName">
       </div>
-      <div class="nav">
-        Nav goes here
+      <div>
+        <label for="lastNameId">Last Name:</label>
+        <input type="text" id="lastNameId" name="lastName">
       </div>
-      <div class="content">
-        <div>
-          Cillum instituendarum commodo aute laboris, veniam ingeniis
-          familiaritatem. Sint non proident e deserunt consectetur hic
-          vidisse. Ea duis senserit deserunt.Cernantur anim
-          expetendis, consequat quem ullamco, occaecat ea multos
-          eiusmod eu veniam laboris o iudicem. Deserunt tempor dolore
-          laboris illum, ab nostrud te singulis. Ingeniis export ita
-          doctrina voluptatibus hic officia o irure, eu nostrud
-          consectetur, nam iis enim dolor minim.
-        </div>
+      <h2>Textarea Input</h2>
+      <div>
+        <label for="codeFeelingsId">How do you feel about programming?</label>
+        <br>
+        <textarea id="codeFeelingsId" name="codeFeelings" rows="5" cols="30">Default text</textarea>
       </div>
-    </div>
+      <h2>Radio Input</h2>
+      <p>What program are you in?</p>
+      <div>
+        <input type="radio" id="raspRadio" name="program" value="rasp">
+        <label for="raspRadio">Recording Arts and Show Production</label>
+      </div>
+      <div>
+        <input type="radio" id="dfvpRadio" name="program" value="dfvp">
+        <label for="dfvpRadio">Digital Filmmaking and Video Production</label>
+      </div>
+      <div>
+        <input type="radio" id="gdwdRadio" name="program" value="gdwd">
+        <label for="gdwdRadio">Graphic Design and Web Development</label>
+      </div>
+      <h2>Checkbox Input</h2>
+      <p>How do you get to class?</p>
+      <div>
+        <input type="checkbox" id="bikeCheckbox" name="vehicleOption1" value="bike">
+        <label for="bikeCheckbox">Bike</label>
+      </div>
+      <div>
+        <input type="checkbox" id="busCheckbox" name="vehicleOption2" value="bus">
+        <label for="busCheckbox">Bus</label>
+      </div>
+      <div>
+        <input type="checkbox" id="carCheckbox" name="vehicleOption3" value="car">
+        <label for="carCheckbox">Car</label>
+      </div>
+      <div>
+        <input type="checkbox" id="bedCheckbox" name="vehicleOption4" value="bed">
+        <label for="bedCheckbox">I roll out of bed and open my laptop</label>
+      </div>
+      <h2>Date Input</h2>
+      <div>
+        <label for="dateId">What is your birthday?</label>
+        <input type="date" id="dateId" name="bday">
+      </div>
+      <h2>Dropdown (&lt;select&gt;) Input</h2>
+      <div>
+        <label for="foodGroupId">What is your favorite food group?</label>
+        <select id="foodGroupId" name="foodgroup">
+          <option value="fruits">Fruits</option>
+          <option value="vegetables">Vegatables</option>
+          <option value="meats">Meat</option>
+          <option value="grains">Grains</option>
+          <option value="dairy">Dairy</option>
+        </select>
+      </div>
+    </form>
   </body>
 </html>
